@@ -9,6 +9,30 @@
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
+		function makeChange(amount) {
+  // amount is in cents and between 1 and 99
+
+  const result = {};
+
+  // Calculate quarters (25¢)
+  result.q = Math.floor(amount / 25);
+  amount = amount % 25;
+
+  // Calculate dimes (10¢)
+  result.d = Math.floor(amount / 10);
+  amount = amount % 10;
+
+  // Calculate nickels (5¢)
+  result.n = Math.floor(amount / 5);
+  amount = amount % 5;
+
+  // Remaining cents are pennies (1¢)
+  result.p = amount;
+
+  return result;
+}
+
+
 </script>
 
 </body>
